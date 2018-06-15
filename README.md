@@ -1,15 +1,14 @@
 # NEIGHBOURHOOD-MAP
-# Neighbourhood-Map
 
 ## ABOUT:
 
-The project is to develop a single page application accessing a map of neighbourhood to visit.Some list of places that i used to visit in vizag are highlighted in this project.
+The project is to develop a single page application accessing a map of neighbourhood to visit.Some list of places that are famous in Tanuku City are highlighted in this project.
 
 The purpose of this project is to combine all previous concepts of front-end web development.
 
 ## FEATURES:
 
-This project allows you to visit best places around vizag and the site is full responsive so that it fits every screen size.You get Google Map, with favourite locations, along with list of locations on left side of page.
+This project allows you to visit best places around Tanuku and the site is full responsive so that it fits every screen size.You get Google Map, with favourite locations, along with list of locations on left side of page.
 
 With the help of search, one can easily filter the locations without any distractions.
 
@@ -17,9 +16,9 @@ With the help of search, one can easily filter the locations without any distrac
 
 Google Maps API is used to show the map and generate the markers etc. Foursquare API is used to pull more information on those locations and provides more listing on clicking the marker and infoWindow shows up.
 
-## PROJECT GOALS:
+## PROJECT includes:
 
-1, Includes a list of favourite locations
+1, Includes a list of famous locations in tanuku.
 
 2, Use Google API and shows the list of locations as map markers.
 
@@ -27,7 +26,7 @@ Google Maps API is used to show the map and generate the markers etc. Foursquare
 
 4, Uses foursquare API to display data inside infoWindow on clicking the map markers.
 
-5, All data requests are retrieved in an asynchronous manner.
+5, All data requests are retrieved in an asynchronous manner.                                   
 
 6, Run web application error free with use of Foursquare API and Google API.
 
@@ -38,6 +37,9 @@ Google Maps API is used to show the map and generate the markers etc. Foursquare
 * Google Maps API
 
 * Foursquare Developer API 
+
+* Modern Web Browser
+
 ## HOW TO RUN:
 
 * Double click the index.html to run the project.
