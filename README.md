@@ -18,17 +18,17 @@ Google Maps API is used to show the map and generate the markers etc. Foursquare
 
 ## PROJECT includes:
 
-** Includes a list of famous locations in tanuku.
+* Includes a list of famous locations in tanuku.
 
-** Use Google API and shows the list of locations as map markers.
+* Use Google API and shows the list of locations as map markers.
 
-3, Includes a search bar with filter functionality to show filtered map markers and locations list.
+* Includes a search bar with filter functionality to show filtered map markers and locations list.
 
-4, Uses foursquare API to display data inside infoWindow on clicking the map markers.
+* Uses foursquare API to display data inside infoWindow on clicking the map markers.
 
-5, All data requests are retrieved in an asynchronous manner.                                   
+* All data requests are retrieved in an asynchronous manner.                                   
 
-6, Run web application error free with use of Foursquare API and Google API.
+* Run web application error free with use of Foursquare API and Google API.
 
 ## RESOURCES:
 
