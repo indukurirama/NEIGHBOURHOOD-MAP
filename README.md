@@ -42,4 +42,4 @@ Google Maps API is used to show the map and generate the markers etc. Foursquare
 
 ## HOW TO RUN:
 
-* Double click the index.html to run the project.
+* Double click the index.html to run the project in your web browser.
