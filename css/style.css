@@ -32,7 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color:aquamarine;
+  background-color:white;
 }
 
 .location-item {
@@ -84,7 +84,7 @@ body {
   background-color: #022c418e;
   padding: 5px;
   position: fixed;
-  top: 80px;
+  top: 60px;
   left: 5px;
   cursor: pointer;
   z-index: 3;
