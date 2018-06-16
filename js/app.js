@@ -43,6 +43,10 @@ onGMapsError = function() {
   alert('There was an error occured with the Google Maps. Please try again later.');
 };
 
+var CLIENT_ID = 'UTKAON5Y1VK1UZ11YRBE1FISHNYV2V0WTB2YYHCMLRQYOPHP';
+var CLIENT_SECRET = '1VOW1ZGEZPXWL2WRZBP5OCAEN5ZMKSOBIH2DL2CLQEJOND5I';
+
+
 var openedModalBox = null;
 var map;
 var latestMarker = null;
@@ -61,9 +65,7 @@ var Location = function(jobsw) {
     var data = data.response.venues[0];
 
     find.title = data.name;
-    find.category = data.category;
-    find.address = data.location.formattedAddress.join(', ');
-    
+ 
   }).fail(function() {
     alert('There was an error occured with the Foursquare API. Please try again later.');
   });
@@ -93,12 +95,6 @@ var Location = function(jobsw) {
     var infoWindowContentData = [
       '<div class="info-window">',
         '<h4>', find.title, '</h4>',
-        
-        '<p>',
-          find.category,
-        '<p>',
-        
-        
       '</div>'
     ];
     var infoWindow = new google.maps.InfoWindow({ content: infoWindowContentData.join('') });
@@ -117,8 +113,6 @@ var Location = function(jobsw) {
 
 };
 
-var CLIENT_ID = 'UTKAON5Y1VK1UZ11YRBE1FISHNYV2V0WTB2YYHCMLRQYOPHP';
-var CLIENT_SECRET = '1VOW1ZGEZPXWL2WRZBP5OCAEN5ZMKSOBIH2DL2CLQEJOND5I';
 
 var AppViewModel = function() {
   var find = this;
