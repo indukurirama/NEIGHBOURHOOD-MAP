@@ -2,17 +2,17 @@
 
 var initStatistics = [
   {
-    title: 'Apple Hospital',
+    title: 'Apple Hospitals',
     lat: 16.754935,
     lng: 81.674549
   },
   {
-    title: 'The Andhra Sugars',
+    title: 'The Andhra Sugars Limited',
     lat: 16.740581,
     lng: 81.674094
   },
   {
-    title: 'Gowthami Solvent Oils Limited',
+    title: 'Gowthami Solvent Oils Limited ( spinning division)',
     lat: 16.765003,
     lng: 81.668860
   },
@@ -22,17 +22,17 @@ var initStatistics = [
     lng: 81.689948
   },
   {
-    title: 'S M V M Polytechnic',
+    title: 'S.M.V.M Polytechnic',
     lat: 16.754782,
     lng: 81.678040
   },
   {
-    title: 'S K S D Mahila Kalasal',
+    title: 'SKSD Mahila Kalasala',
     lat: 16.7518374,
     lng: 81.6955677
   },
   {
-    title: 'Kamma Kalyana Mandapam',
+    title: 'Mullapudi Harischandra prasad Kamma Kalyana Mandapam',
     lat: 16.766517,
     lng: 81.678370
   }
@@ -63,9 +63,6 @@ var Location = function(jobsw) {
 
   $.getJSON(url).done(function(data) {
     var data = data.response.venues[0];
-
-    find.title = data.name;
- 
   }).fail(function() {
     alert('There was an error occured with the Foursquare API. Please try again later.');
   });
