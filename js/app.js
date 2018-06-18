@@ -2,39 +2,46 @@
 
 var initStatistics = [
   {
-    title: 'Apple Hospitals',
-    lat: 16.754935,
-    lng: 81.674549
+    title: 'Daneswari Ammavaru',
+    lat: 16.752008,
+    lng: 81.733916,
+    category: 'Temple'
   },
   {
     title: 'The Andhra Sugars Limited',
     lat: 16.740581,
-    lng: 81.674094
+    lng: 81.674094,
+    category: 'sugarFactory'
   },
   {
     title: 'Gowthami Solvent Oils Limited ( spinning division)',
     lat: 16.765003,
-    lng: 81.668860
+    lng: 81.668860,
+    category: 'OilFactory'
   },
   {
     title: 'Hotel Chitturi Heritage',
     lat: 16.753837,
-    lng: 81.689948
+    lng: 81.689948,
+    category: 'Hotel'
   },
   {
     title: 'S.M.V.M Polytechnic',
     lat: 16.754782,
-    lng: 81.678040
+    lng: 81.678040,
+    category: 'PolytechnicCollege'
   },
   {
     title: 'SKSD Mahila Kalasala',
     lat: 16.7518374,
-    lng: 81.6955677
+    lng: 81.6955677,
+    category: 'DegreeCollege'
   },
   {
     title: 'Mullapudi Harischandra prasad Kamma Kalyana Mandapam',
     lat: 16.766517,
-    lng: 81.678370
+    lng: 81.678370,
+    category: 'FunctionHall'
   }
 ];
 
@@ -51,18 +58,27 @@ var openedModalBox = null;
 var map;
 var latestMarker = null;
 
-var Location = function(jobsw) {
+var Location = function(params) {
   var find = this;
+  
 
-  find.title = jobsw.title;
-  find.searchTitle = jobsw.title.toLowerCase();
+  find.title = params.title;
+  find.searchTitle = params.title.toLowerCase();
+  find.URL = "";
+	find.street = "";
+	find.city = "";
+	find.phone = "";
 
   var url = 'https://api.foursquare.com/v2/venues/search?v=20161016&ll='
-    + jobsw.lat + ',' + jobsw.lng + '&intent=global&query=' + jobsw.title
+    + params.lat + ',' + params.lng + '&intent=global&query=' + params.title
     + '&client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET;
 
   $.getJSON(url).done(function(data) {
-    var data = data.response.venues[0];
+    var results = data.response.venues[0];
+    
+    find.street = results.location.formattedAddress[0];
+    find.city = results.location.formattedAddress[1];
+
   }).fail(function() {
     alert('There was an error occured with the Foursquare API. Please try again later.');
   });
@@ -70,7 +86,7 @@ var Location = function(jobsw) {
 
   find.marker = new google.maps.Marker({
     map: map,
-    position: new google.maps.LatLng(jobsw.lat, jobsw.lng),
+    position: new google.maps.LatLng(params.lat, params.lng),
     title: find.title
   });
 
@@ -92,6 +108,9 @@ var Location = function(jobsw) {
     var infoWindowContentData = [
       '<div class="info-window">',
         '<h4>', find.title, '</h4>',
+        '<p>', find.category, '</p>',
+        '<p>', find.street, '</p>',
+        '<p>', find.city, '</p>',
       '</div>'
     ];
     var infoWindow = new google.maps.InfoWindow({ content: infoWindowContentData.join('') });
