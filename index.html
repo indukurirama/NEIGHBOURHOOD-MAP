@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Neighborhood Map</title>
+      <link rel="stylesheet" href="css/styles.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   <body>
+    <div>
+        <div class="search" id="search">   
+            <input class="menu-list" id="menu-list" data-bind="textInput: searchTerm, valueUpdate: 'afterkeydown'"  placeholder="find locations"/>
+        </div>
+        <div class="dsg">
+            <center><h1>MY NEIGHBOURHOOD MAP</h1></center>
+        </div>
+        <div class="apply" id="apply">
+            <div class="list" id="list">
+                <ul class="outputs" id="outputs" data-bind="foreach: filteredList">
+                    <li class="fix" id="fix" data-bind="text: name, click: bounce"></li>
+                </ul>
+            </div>
+        <div class="luke" id="map">There has been an error loading Google Maps. Please Try Again.</div>
+    </div>
+      <script src='js/knockout.js'></script>
+      <script src='js/jquery.js'></script>
+      <script src='js/app.js'></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBjvpkcS3AarSdW3jzKKqUoBYXVzFmXak&callback=startApp&libraries=places" onerror="errorHandling()"></script>
+   </body>
+</html>
