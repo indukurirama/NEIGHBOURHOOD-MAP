@@ -2,13 +2,13 @@
 
 ## ABOUT:
 
-The project is to develop a single page application accessing a map of neighbourhood to visit.Some list of places that are famous in Tanuku City are highlighted in this project.
+The project is to develop a single page application accessing a map of neighbourhood to visit.Some list of places that are famous in Munbai City are highlighted in this project.
 
 The purpose of this project is to combine all previous concepts of front-end web development.
 
 ## FEATURES:
 
-This project allows you to visit best places around Tanuku and the site is full responsive so that it fits every screen size.You get Google Map, with favourite locations, along with list of locations on left side of page.
+This project allows you to visit best places around Mumbai and the site is full responsive so that it fits every screen size.You get Google Map, with favourite locations, along with list of locations on left side of page.
 
 With the help of search, one can easily filter the locations without any distractions.
 
@@ -18,7 +18,7 @@ Google Maps API is used to show the map and generate the markers etc. Foursquare
 
 ## PROJECT includes:
 
-* Includes a list of famous locations in tanuku.
+* Includes a list of famous locations in mumbai.
 
 * Use Google API and shows the list of locations as map markers.
 
